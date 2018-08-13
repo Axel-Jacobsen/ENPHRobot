@@ -30,6 +30,7 @@ html {
 }
 .titleTextBox .mainLinks {
   font-size: 1.5rem;
+  line-height: 2.25rem;
   display: flex;
   flex-direction: column;
 }
@@ -43,7 +44,7 @@ html {
 
 @media screen and (max-width: 860px) {
   .titleTextBox {
-    background-color: #88ff88;
+    background-color: rgba(230, 234, 235, 0.8);
   }
 }
 
