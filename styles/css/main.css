@@ -17,16 +17,19 @@ html {
 
 .titleTextBox {
   margin: 0;
+  padding: 5px 5px 0 10px;
+  border-radius: 5px;
   position: absolute;
   top: 5%;
   left: 5%;
 }
 .titleTextBox .titleCard {
-  font-size: 50px;
+  font-size: 3rem;
   color: #444343;
+  margin: 0;
 }
 .titleTextBox .mainLinks {
-  font-size: 30px;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -36,6 +39,12 @@ html {
 }
 .titleTextBox .mainLinks a:hover {
   color: #797878;
+}
+
+@media screen and (max-width: 860px) {
+  .titleTextBox {
+    background-color: #88ff88;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
