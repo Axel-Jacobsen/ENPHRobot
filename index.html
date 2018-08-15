@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <div class="firstDiv">
-        <div class="titleTextBox">
+    <div class="pageDiv firstDiv">
+        <div class="shade positionTopLeft">
             <h2 class="titleCard">Vanessa</h2>
             <p class="mainLinks">
-                <a href="#theproblem">The Problem</a>
+                <a href="#theproblem">The problem</a>
                 <a href="#mechanical">Mechanics</a>
                 <a href="#electrical">Electronics</a>
                 <a href="#software">Software</a>
@@ -24,22 +24,40 @@
         </div>
     </div>
 
-    <div id="theproblem">
+    <div class="pageDiv secondDiv" id="theproblem">
+        <div class="vFlexOnWidth positionTopLeft">
+            <div class="leftSide">
+                <h2 class="titleCard">The Problem</h2>
+                <p class="leftParagraph">
+                    Four Ewoks and Chewbacca are trapped in the Empire Stronghold! Our task was to create an autonomous robot to navigate the
+                    stronghold and return the rescuees to the start of the course.
+                    <br><br>
+                    To do this, we had to navigate over gaps, identify and react to alternating IR frequencies, climb a ramp, and deploy a basket to return our captured critters.
+                </p>
+            </div>
+
+            <!-- We should change this image if we can, leaving it now to finish other stuff-->
+            <img src="images/competition.png">
+        </div>
+    </div>
+
+    <div style="background-color: #88ff;" class="pageDiv" id="mechanical">
         Booga booga booga
     </div>
-    <div id="mechanical">
+
+    <div style="background-color: #88ff88;" class="pageDiv" id="electrical">
         Booga booga booga
     </div>
-    <div id="electrical">
+
+    <div style="background-color: #88aaee;" class="pageDiv" id="software">
         Booga booga booga
     </div>
-    <div id="software">
+
+    <div style="background-color: #123456;" class="pageDiv" id="takeaways">
         Booga booga booga
     </div>
-    <div id="takeaways">
-        Booga booga booga
-    </div>
-    <div id="whoami">
+
+    <div class="pageDiv" id="whoami">
         haha jesus christ and cheeze its rice
     </div>
 </body>
