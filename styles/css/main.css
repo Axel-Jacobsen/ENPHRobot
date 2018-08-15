@@ -5,22 +5,26 @@ html {
   padding: 0;
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
-  min-width: 560px;
+  min-width: 570px;
 }
 
 p {
   font-size: 1.3rem;
+  line-height: 1.8;
 }
 
 .vFlexOnWidth {
   display: flex;
+  align-items: center;
   justify-content: space-around;
+  height: 100%;
 }
 
 .pageDiv {
   width: 100%;
-  min-height: 100%;
-  height: auto;
+  height: 100%;
+  display: block;
+  overflow: hidden;
   padding-bottom: 40px;
   background-size: cover;
   background-position: center;
@@ -56,11 +60,7 @@ p {
   background-color: white;
 }
 
-.leftParagraph {
-  line-height: 1.8;
-}
-
-.leftSide {
+.halfWidth {
   width: 50%;
 }
 
