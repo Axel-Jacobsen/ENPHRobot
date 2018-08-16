@@ -45,25 +45,20 @@ i {
   position: relative;
 }
 
-.mainLinks {
-  font-size: 1.5rem;
-  line-height: 1.75;
-  display: flex;
-  flex-direction: column;
-}
-
-.titleCard {
-  font-size: 3rem;
-  color: #444343;
-  margin: 0;
-}
-
-.firstDiv {
+.introDiv {
   background-image: url("../../images/glalal.png");
 }
 
-.secondDiv {
+.problemDiv {
   background-color: white;
+}
+
+.strategyDiv {
+  background-color: #8dbfee;
+}
+
+.whoAreWeDiv {
+  background-color: #918e6e;
 }
 
 .halfWidth {
@@ -80,9 +75,21 @@ i {
   text-align: right;
 }
 
-.shade {
-  padding: 5px 5px 0 10px;
-  border-radius: 5px;
+.titleCard {
+  font-size: 3rem;
+  color: #444343;
+  margin: 0;
+}
+
+.mainLinks {
+  font-size: 1.5rem;
+  line-height: 1.75;
+  display: flex;
+  flex-direction: column;
+}
+
+.humanText {
+  max-width: 230px;
 }
 
 .baseImg {
@@ -106,8 +113,9 @@ i {
   max-width: 230px;
 }
 
-.humanText {
-  max-width: 230px;
+.shade {
+  padding: 5px 5px 0 10px;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1090px) {

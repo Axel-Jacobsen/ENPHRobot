@@ -1,4 +1,5 @@
 @import 'variables';
+// Tag changes
 body,
 html {
     height: 100%;
@@ -28,6 +29,7 @@ i {
     color: $titlecolor-light;
 }
 
+// div classes
 // 'Variable Flex on Width': change from "flex direction
 // 'row'" to "flex direction 'column'" when going below $vFlexWidth
 .vFlexOnWidth {
@@ -49,27 +51,29 @@ i {
     position: relative;
 }
 
-.mainLinks {
-    font-size: 1.5rem;
-    line-height: 1.75;
-    display: flex;
-    flex-direction: column;
-}
-
-.titleCard {
-    font-size: 3rem;
-    color: $titlecolor;
-    margin: 0;
-}
-
-.firstDiv {
+.introDiv {
     background-image: url('../../images/glalal.png');
 }
 
-.secondDiv {
-    background-color: $seconddiv-color;
+.problemDiv {
+    background-color: $problemDiv-color;
 }
 
+.strategyDiv {
+    background-color: $strategyDiv-color;
+}
+
+.whoAreWeDiv {
+    background-color: $whoAreWeDiv-color;
+}
+
+.mechDiv {}
+
+.elecDiv {}
+
+.codeDiv {}
+
+// Positioning
 .halfWidth {
     width: 50%;
 }
@@ -84,11 +88,25 @@ i {
     text-align: right;
 }
 
-.shade {
-    padding: 5px 5px 0 10px;
-    border-radius: 5px;
+// Text styling
+.titleCard {
+    font-size: 3rem;
+    color: $titlecolor;
+    margin: 0;
 }
 
+.mainLinks {
+    font-size: 1.5rem;
+    line-height: 1.75;
+    display: flex;
+    flex-direction: column;
+}
+
+.humanText {
+    max-width: 230px;
+}
+
+// Images
 .baseImg {
     display: block;
     height: auto;
@@ -110,8 +128,10 @@ i {
     max-width: 230px;
 }
 
-.humanText {
-    max-width: 230px;
+// Reactive
+.shade {
+    padding: 5px 5px 0 10px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: $shadeFlexWidth) {
