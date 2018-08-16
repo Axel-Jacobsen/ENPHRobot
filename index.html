@@ -16,12 +16,12 @@
             <p class="mainLinks">
                 <a href="#theproblem">The problem</a>
                 <a href="#strategy">Strategy</a>
-                <a href="#whoami">Who are we?</a>
                 <i>Major Components</i>
                 <a href="#mechanical">Mechanics</a>
                 <a href="#electrical">Electronics</a>
                 <a href="#software">Software</a>
                 <a href="#projectmgmt">Project Management</a>
+                <a href="#whoami">Meet the team</a>
             </p>
         </div>
     </div>
@@ -50,8 +50,8 @@
     </div>
 
     <div class="pageDiv strategyDiv" id="strategy">
-        <div class="vFlexOnWidth reverseColumn">
-            <img class="baseImg robotImg" src="images/real_bot.JPG">
+        <div class="vFlexOnWidth vReverseColumn">
+            <img class="baseImg robotImg" src="images/realbot.JPG">
             <div class="halfWidth rightSideText">
                 <h2 class="titleCard">Strategy</h2>
                 <p>
@@ -74,6 +74,80 @@
             </div>
         </div>
     </div>
+
+
+    <div class="pageDiv mechDiv" id="mechanical">
+        <div class="vFlexOnWidth">
+
+        </div>
+    </div>
+
+    <div class="pageDiv elecDiv" id="electrical">
+        <div class="vFlexOnWidth vReverseColumn">
+            <img class="baseImg pcbImg" src="images/board.png">
+            <div class="halfWidth rightSideText">
+                <h2 class="titleCard">Electronics</h2>
+                <p>
+                    The electrical circuitry of the robot was all integrated into a single printed circuitboard, which we designed ourselves
+                    using Autodesk Eagle. Printing the circuit board allowed us to bundle up the "brains" of our robot in
+                    a small volume able to fit between the two tracks, making our design compact, yet still robust. We blew
+                    some traces powering our motors a few times. We also had to make the circuits we designed somewhat adaptable
+                    on the circuit board, in case a design changed during the development of our robot. To do this, we used
+                    common IC packages as much as possible, and kept them all at the same power and ground rails. Our single
+                    circuit board was comprised of two h-bridge motor drivers; a switching voltage regulator and a couple
+                    of resistors which were used to control all the servos in the robot (the basket and claw mechanisms);
+                    another switching voltage regulator to power the STM32 F4 MCU and Raspberry Pi (which fitted into the
+                    board as if it were a giant shield); a linear voltage regulator to provide a separate clean power supply
+                    for the ICs; two rail-to-rail amplifiers which were used to amplify infrared signals for the MCU to process
+                    digitally; and four opto-sensor comparator circuits which use infrared transmission and reflection to
+                    detect edges and nearby obstacles; and another infrared beam which tripped when an ewok entered the claw
+                    and alerted us to capture it. We were able to placate any potential noise issues by using a common ground
+                    plane throughout the circuit board, placing a pair of decoupling capacitors at every IC, and by powering
+                    the three main parts of the circuit board separately. The motor drivers and MCUs were powered by the
+                    main battery. The servos were powered by another battery, and the ICs were powered by a separate battery.
+                    Issues: some of the trace widths were too small, and blew when high current past through them (i.e. motors).
+                    We also found that under harsh conditions (lifting the robot so there is no load on the motors when driven
+                    fully) created ground transience which travelled back into the STM and fried it. To fix this issue, we
+                    added a zener diode and capacitor in parallel on the input supply to prevent power spikes from frying
+                    it. We also added parallel shocky diodes on the hbridge signals try isolate them. (edited) we can also
+                    get diagrams of the circuits from eagle if we want to describe how each of them work individually
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pageDiv codeDiv" id="software">
+        <div class="vFlexOnWidth">
+            <div class="vFlexOnWidth column">
+                <img class="baseImg compImg" src="images/comp1.jpg">
+                <img class="baseImg compImg" src="images/comp2.jpg">
+                <img class="baseImg compImg" src="images/comp3.jpg">
+            </div>
+            <div class="halfWidth rightSideText">
+                <h2 class="titleCard">Software</h2>
+                <p>
+                    Vanessa performed well during testing, but had some difficulties during the competition. Due to the complexity of our approach,
+                    we had difficulty integrating everything on time, and had to abandon our dream of a universal procedure
+                    with no hard-coding in favor of a faster but less general strategy. We began our runs with a hardcoded
+                    7 second drive using the encoders to keep Vanessa straight, before she began looking for Ewoks. Since
+                    this maneuver was completely hard-coded, Vanessa’s starting position had a large impact on her path up
+                    the ramp. During the first run, she started too far left, and tracked off course, falling onto the PCB
+                    between the tracks and breaking our main power connection. We managed to repair the wire in the 2 minutes
+                    between rounds, but the first 3 attempts in round 2 had similar results, with Vanessa starting incorrectly
+                    and driving off the course before the computer vision ever took over. On the final attempt of our second
+                    run, she finally made it up the ramp far enough that the computer vision took over. From there, everything
+                    worked perfectly. She tracked towards the first Ewok using the camera, crossed the 6 inch gap with no
+                    issues, tracked towards the second Ewok, waited for the IR beacon, and proceeded through the gate without
+                    triggering the alarm. Unfortunately, we hit our 2 minute time limit and had to stop before attempting
+                    to rescue the third Ewok. Overall, the individual systems worked extremely well, but we underestimate
+                    the amount of time needed to integrate and test the control system as a whole. If we had time to create
+                    a universal control loop that relied only on the inputs of the various sensors and contained no hard-coded
+                    procedures, I think we would have performed much better on competition day.
+                </p>
+            </div>
+        </div>
+    </div>
+
 
     <div class="pageDiv whoAreWeDiv" id="whoami">
         <div class="vFlexOnWidth column">
@@ -113,20 +187,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="pageDiv mechDiv" id="mechanical">
-        <div class="vFlexOnWidth">
-
-        </div>
-    </div>
-
-    <div class="pageDiv elecDiv" id="electrical">
-        Booga booga booga
-    </div>
-
-    <div class="pageDiv codeDiv" id="software">
-        Booga booga booga
     </div>
 
     <!--
