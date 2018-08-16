@@ -25,10 +25,6 @@ a:hover {
     color: $titlecolor-light;
 }
 
-i {
-    color: $titlecolor-light;
-}
-
 // div classes
 // 'Variable Flex on Width': change from "flex direction
 // 'row'" to "flex direction 'column'" when going below $vFlexWidth
@@ -37,6 +33,17 @@ i {
     align-items: center;
     justify-content: space-around;
     height: 100%;
+    width: 100%;
+}
+
+.autoHeight {
+    height: auto;
+}
+
+.column {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .pageDiv {
@@ -53,6 +60,9 @@ i {
 
 .introDiv {
     background-image: url('../../images/glalal.png');
+    i {
+        color: $titlecolor-light;
+    }
 }
 
 .problemDiv {
@@ -65,6 +75,10 @@ i {
 
 .whoAreWeDiv {
     background-color: $whoAreWeDiv-color;
+    i {
+        font-size: 1.3rem;
+        color: $titlecolor;
+    }
 }
 
 .mechDiv {}
@@ -148,7 +162,7 @@ i {
     .leftSide {
         width: 80%;
     }
-    .reverseColumn {
+    .vReverseColumn {
         flex-direction: column-reverse;
     }
     .pageDiv {

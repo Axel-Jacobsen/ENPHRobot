@@ -22,15 +22,22 @@ a:hover {
   color: #797878;
 }
 
-i {
-  color: #797878;
-}
-
 .vFlexOnWidth {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 100%;
+  width: 100%;
+}
+
+.autoHeight {
+  height: auto;
+}
+
+.column {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .pageDiv {
@@ -48,6 +55,9 @@ i {
 .introDiv {
   background-image: url("../../images/glalal.png");
 }
+.introDiv i {
+  color: #797878;
+}
 
 .problemDiv {
   background-color: white;
@@ -58,7 +68,11 @@ i {
 }
 
 .whoAreWeDiv {
-  background-color: #918e6e;
+  background-color: #a6e4e1;
+}
+.whoAreWeDiv i {
+  font-size: 1.3rem;
+  color: #444343;
 }
 
 .halfWidth {
@@ -133,7 +147,7 @@ i {
     width: 80%;
   }
 
-  .reverseColumn {
+  .vReverseColumn {
     flex-direction: column-reverse;
   }
 
