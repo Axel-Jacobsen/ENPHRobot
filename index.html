@@ -16,11 +16,12 @@
             <p class="mainLinks">
                 <a href="#theproblem">The problem</a>
                 <a href="#strategy">Strategy</a>
+                <a href="#whoami">Who are we?</a>
+                <i>Major Components</i>
                 <a href="#mechanical">Mechanics</a>
                 <a href="#electrical">Electronics</a>
                 <a href="#software">Software</a>
-                <a href="#takeaways">What we learned</a>
-                <a href="#whoami">Who are we?</a>
+                <a href="#projectmgmt">Project Management</a>
             </p>
         </div>
     </div>
@@ -31,11 +32,15 @@
                 <h2 class="titleCard">The Problem</h2>
                 <p>
                     Four Ewoks and Chewbacca are trapped in the Empire Stronghold! Our task was to create an autonomous robot to navigate the
-                    stronghold and return the rescuees to the start of the course.
-                    <br>
-                    <!-- TODO: rescuees is not a word -->
-                    <br> To do this, we had to navigate over gaps, identify and react to alternating IR frequencies, climb a
-                    ramp, and deploy a basket to return our captured critters.
+                    stronghold and return the prisoners to the start of the course.
+                </p>
+                <p>
+                    To do this, we had to navigate over gaps, identify and react to alternating IR frequencies, climb a ramp, and deploy a basket
+                    to return our captured critters.
+                </p>
+                <p>
+                    This is a diagram of the competition surface. It shows the positions of the Ewoks and Chewbacca, the gaps that we had to
+                    cross, and the position and direction of the IR sensors.
                 </p>
             </div>
 
@@ -50,14 +55,43 @@
             <div class="halfWidth rightSideText">
                 <h2 class="titleCard">Strategy</h2>
                 <p>
-                    Our team was unique because of our strategy.
+                    Our team took an unique approach to this challenge.
                 </p>
                 <p>
-                    To navigate to Ewoks, a RaspberryPi was running a machine learning algorithm called <a href="https://pjreddie.com/darknet/yolo/">YOLO</a> to find their locations. 
+                    To navigate to Ewoks, a RaspberryPi was running a machine learning algorithm called
+                    <a href="https://pjreddie.com/darknet/yolo/">YOLO</a> to find their locations.
                 </p>
                 <p>
-                    This RaspberryPi would send signals to a microcontroller (STM32F4) that was processing signals and making decisions. The microcontroller would request directions to an Ewok when it was ready, allowing us to navigate as soon as we needed.
+                    This RaspberryPi would send signals to a microcontroller (STM32F4) that was processing signals and making decisions. The
+                    microcontroller would request directions to an Ewok when it was ready, allowing us to navigate purely
+                    by finding Ewoks, and not by following tape.
                 </p>
+                <p>
+                    We chose a treaded robot in order to traverse the gaps. This let us roll over the gaps instead of taking time to deploy a
+                    bridge that may be misplaced. Treads gave our robot reliability, as well as allowing us to focus on other
+                    aspects of the competition.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pageDiv fourthDiv" id="whoami">
+        <div class="vFlexOnWidth">
+            <div class="human">
+                <img class="baseImg humanImg" src="images/ben.jpeg">
+                <p class="humanText"></p>
+            </div>
+            <div class="human">
+                <img class="baseImg humanImg" src="images/roee.jpeg">
+                <p class="humanText"></p>
+            </div>
+            <div class="human">
+                <img class="baseImg humanImg" src="images/sean.jpeg">
+                <p class="humanText"></p>
+            </div>
+            <div class="human">
+                <img class="baseImg humanImg" src="images/axel.jpeg">
+                <p class="humanText"></p>
             </div>
         </div>
     </div>
@@ -72,14 +106,6 @@
 
     <div style="background-color: #88aaee;" class="pageDiv" id="software">
         Booga booga booga
-    </div>
-
-    <div style="background-color: #123456;" class="pageDiv" id="takeaways">
-        Booga booga booga
-    </div>
-
-    <div class="pageDiv" id="whoami">
-        haha jesus christ and cheeze its rice
     </div>
 </body>
 

@@ -15,10 +15,14 @@ p {
 
 a {
   text-decoration: none;
-  color: #525151;
+  color: #444343;
 }
 
 a:hover {
+  color: #797878;
+}
+
+i {
   color: #797878;
 }
 
@@ -95,6 +99,15 @@ a:hover {
 .robotImg {
   max-height: 600px;
   max-width: 450px;
+}
+
+.humanImg {
+  max-height: 270px;
+  max-width: 230px;
+}
+
+.humanText {
+  max-width: 230px;
 }
 
 @media screen and (max-width: 1090px) {

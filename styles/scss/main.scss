@@ -17,10 +17,14 @@ p {
 a {
     // Get rid of silly <a> styling
     text-decoration: none;
-    color: $titlecolor-kindalight;
+    color: $titlecolor;
 }
 
 a:hover {
+    color: $titlecolor-light;
+}
+
+i {
     color: $titlecolor-light;
 }
 
@@ -99,6 +103,15 @@ a:hover {
 .robotImg {
     max-height: 600px;
     max-width: 450px;
+}
+
+.humanImg {
+    max-height: 270px;
+    max-width: 230px;
+}
+
+.humanText {
+    max-width: 230px;
 }
 
 @media screen and (max-width: $shadeFlexWidth) {
