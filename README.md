@@ -1,7 +1,8 @@
 # RobotSummer
 
-[the bible](https://docs.google.com/document/d/1TkDaE-6srsIp6izWljWf_l1Ucgkgqu5EYUyO6YYTsj0/edit)
+## Why?
+This website was developed to record our result of ENPH 253, the notorious robotics course of UBC's Engineering Physics. We left the course with Vanessa, an autonomous machine-learning, eardrum-bursting, ewok grabbing eight motored monster. Take a read, and see what we have created!
 
 ## Developing
 
-I am using [sass](https://sass-lang.com/guide) which just makes your life so much easier. When developing, make sure you are running `https://sass-lang.com/guide` somewhere to compile the sass to css. Sass is pretty much the same as CSS but you can do nice things like nesting and using variables easily.
+I am using [sass](https://sass-lang.com/guide) which just makes your life so much easier. When developing, make sure you are running `sass --watch styles/scss:styles:css`in the root directory to compile the sass to css. Sass is pretty much the same as CSS but you can do nice things like nesting and using variables easily.
