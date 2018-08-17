@@ -80,16 +80,19 @@ a:hover {
     background-color: $strategyDiv-color;
 }
 
-.whoAreWeDiv {
-    background-color: $whoAreWeDiv-color;
-    i {
-        font-size: 1.3rem;
-        color: $titlecolor;
-    }
-}
-
 .mechDiv {
     background-color: $mechDiv-color;
+    h2,
+    h3 {
+        color: $titlecolor-white;
+    }
+    p,
+    i {
+        color: $paragraph-white;
+    }
+    a {
+        color: $paragraph-kindawhite;
+    }
 }
 
 .elecDiv {
@@ -98,7 +101,8 @@ a:hover {
     h3 {
         color: $titlecolor-white;
     }
-    p {
+    p,
+    i {
         color: $paragraph-white;
     }
     a {
@@ -106,13 +110,30 @@ a:hover {
     }
 }
 
-.codeDiv {}
+.piDiv {
+    background-color: $piDiv-color;
+}
+
+.stmDiv {
+    background-color: $stmDiv-color;
+}
+
+.compDiv {
+    background-color: $compDiv-color;
+}
+
+.whoAreWeDiv {
+    background-color: $whoAreWeDiv-color;
+    i {
+        font-size: 1.3rem;
+        color: $titlecolor;
+    }
+}
 
 .compDiv {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     .column {
         width: 70%;
     }
@@ -248,5 +269,8 @@ a:hover {
     }
     .introDiv {
         height: 100%;
+    }
+    .titleCard {
+        margin-bottom: 30px;
     }
 }

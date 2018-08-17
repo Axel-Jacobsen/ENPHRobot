@@ -70,33 +70,57 @@ a:hover {
 }
 
 .strategyDiv {
-  background-color: #8dbfee;
-}
-
-.whoAreWeDiv {
-  background-color: #cf6c3e;
-}
-.whoAreWeDiv i {
-  font-size: 1.3rem;
-  color: #444343;
+  background-color: #CCDBDC;
 }
 
 .mechDiv {
-  background-color: #7bff83;
+  background-color: #52796F;
+}
+.mechDiv h2,
+.mechDiv h3 {
+  color: #f7f7f7;
+}
+.mechDiv p,
+.mechDiv i {
+  color: #f0efef;
+}
+.mechDiv a {
+  color: #e0e0e0;
 }
 
 .elecDiv {
-  background-color: #1a1a1a;
+  background-color: #003249;
 }
 .elecDiv h2,
 .elecDiv h3 {
   color: #f7f7f7;
 }
-.elecDiv p {
+.elecDiv p,
+.elecDiv i {
   color: #f0efef;
 }
 .elecDiv a {
   color: #e0e0e0;
+}
+
+.piDiv {
+  background-color: #CAD2C5;
+}
+
+.stmDiv {
+  background-color: #9AD1D4;
+}
+
+.compDiv {
+  background-color: #84A98C;
+}
+
+.whoAreWeDiv {
+  background-color: #80CED7;
+}
+.whoAreWeDiv i {
+  font-size: 1.3rem;
+  color: #444343;
 }
 
 .compDiv {
@@ -237,6 +261,10 @@ a:hover {
 
   .introDiv {
     height: 100%;
+  }
+
+  .titleCard {
+    margin-bottom: 30px;
   }
 }
 
