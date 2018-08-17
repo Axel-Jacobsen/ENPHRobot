@@ -21,6 +21,8 @@
                 <a href="#electrical">Electronics</a>
                 <a href="#software">Software</a>
                 <a href="#projectmgmt">Project Management</a>
+                <i>Final Notes</i>
+                <a href="#comp">Performance and Takeaways</a>
                 <a href="#whoami">Meet the team</a>
             </p>
         </div>
@@ -118,41 +120,56 @@
 
     <div class="pageDiv codeDiv" id="software">
         <div class="vFlexOnWidth">
-            <div class="vFlexOnWidth column">
+            <div class="vFlexOnWidth column verticalImageAndCaptions">
+                <h4>Onboard images from competition</h4>
+                
                 <img class="baseImg compImg" src="images/comp1.jpg">
+                <i>First image near the end of the ramp.</i>
+
                 <img class="baseImg compImg" src="images/comp2.jpg">
+                <i>Second image, just before the first Ewok. The horizontal lines are due to damage to the ribbon cable from the camera to the Rasberry Pi.</i>
+
                 <img class="baseImg compImg" src="images/comp3.jpg">
+                <i>Third image, right after the first gap. The miscoloration is due again to damage to the damage to the camera's ribbon cable. Notice, even with the color distoriton, the network still found the Ewok.</i>
             </div>
             <div class="halfWidth rightSideText">
                 <h2 class="titleCard">Software</h2>
                 <p>
-                    Vanessa performed well during testing, but had some difficulties during the competition. Due to the complexity of our approach,
-                    we had difficulty integrating everything on time, and had to abandon our dream of a universal procedure
-                    with no hard-coding in favor of a faster but less general strategy. We began our runs with a hardcoded
-                    7 second drive using the encoders to keep Vanessa straight, before she began looking for Ewoks. Since
-                    this maneuver was completely hard-coded, Vanessa’s starting position had a large impact on her path up
-                    the ramp. During the first run, she started too far left, and tracked off course, falling onto the PCB
-                    between the tracks and breaking our main power connection. We managed to repair the wire in the 2 minutes
-                    between rounds, but the first 3 attempts in round 2 had similar results, with Vanessa starting incorrectly
-                    and driving off the course before the computer vision ever took over. On the final attempt of our second
-                    run, she finally made it up the ramp far enough that the computer vision took over. From there, everything
-                    worked perfectly. She tracked towards the first Ewok using the camera, crossed the 6 inch gap with no
-                    issues, tracked towards the second Ewok, waited for the IR beacon, and proceeded through the gate without
-                    triggering the alarm. Unfortunately, we hit our 2 minute time limit and had to stop before attempting
-                    to rescue the third Ewok. Overall, the individual systems worked extremely well, but we underestimate
-                    the amount of time needed to integrate and test the control system as a whole. If we had time to create
-                    a universal control loop that relied only on the inputs of the various sensors and contained no hard-coded
-                    procedures, I think we would have performed much better on competition day.
+                    In order to navigate towards the Ewoks, we used computer vision. A Raspberry Pi on the robot continuously captured images
+                    of the course ahead using a fisheye camera, and these photos were processed using a Python implementation
+                    of the extremely fast YOLO network (paper | website) trained on over 2500 photos of the competition surface.
+                    During a run, the STM microcontroller would periodically request images from the Raspberry Pi. When it
+                    did, the network would find the coordinates of the bounding boxes around each Ewok in the frame, and
+                    we would calculate our heading error by finding the distance between the center of the frame and the
+                    center of the bounding box. This error was then written to an 8-bit digital to analog converter (a resistor
+                    ladder on our PCB) and the analog voltage was read by the STM. At the same time, an interrupt was triggered
+                    on the STM, telling it to stop the normal navigation loop, and turn to the heading indicated by the Raspberry
+                    Pi. This would turn the robot to face the next Ewok, and then the robot would continue driving towards
+                    it. By using computer vision, we were able to see the Ewoks much farther ahead than many of the other
+                    teams who were using pressure sensors or infrared light sensors. Because of this, we had to hard-code
+                    very few sections of the course, and could navigate directly from Ewok to Ewok. Given more time, a universal
+                    procedure with no hard-coded maneuvers could have been used to navigate any course with similar objectives,
+                    without needing prior knowledge of the layout. Issues: The camera still occasionally missed Ewoks in
+                    the frame, and the low framerate (~2.5s per frame) required the robot to take things very slowly during
+                    the run. Even more training photos could have helped to decrease the number of missed Ewoks, but for
+                    the network we were using, running on a Raspberry Pi we likely couldn’t improve on the framerate. A similar
+                    approach using a simpler network could have given more speed with the tradeoff of accuracy, which may
+                    have been a slight improvement on course.
                 </p>
             </div>
         </div>
     </div>
 
+    <div class="pageDiv compDiv" id="comp">
+        <div class="vFlexOnWidth">
+    
+        </div>
+    </div>
 
     <div class="pageDiv whoAreWeDiv" id="whoami">
         <div class="vFlexOnWidth column">
             <h2 class="titleCard">Meet Team 13</h2>
-            <div class="vFlexOnWidth autoHeight">
+            <div class="vFlexOnWidth autoHeight makeMeThicc">
                 <div class="human">
                     <i>Ben Holmes</i>
                     <img class="baseImg humanImg" src="images/ben.jpeg">
@@ -174,7 +191,7 @@
                     <img class="baseImg humanImg" src="images/sean.jpeg">
                     <p class="humanText">
                         - CAD / Prototyping
-                        <br> - Mecanics
+                        <br> - Mechanics
                     </p>
                 </div>
                 <div class="human">

@@ -29,14 +29,19 @@ a:hover {
   height: 100%;
 }
 
-.autoHeight {
-  height: auto;
-}
-
 .column {
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+}
+
+.verticalImageAndCaptions img {
+  margin-top: 40px;
+}
+.verticalImageAndCaptions img:first-of-type {
+  margin-top: 0px;
+}
+.verticalImageAndCaptions i {
+  width: 300px;
+  color: #525151;
 }
 
 .pageDiv {
@@ -44,7 +49,8 @@ a:hover {
   height: auto;
   display: block;
   overflow: hidden;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,6 +96,18 @@ a:hover {
 }
 .elecDiv a {
   color: #bebebe;
+}
+
+.makeMeThicc {
+  width: 100%;
+}
+
+.makeMeToll {
+  height: 100%;
+}
+
+.autoHeight {
+  height: auto;
 }
 
 .halfWidth {

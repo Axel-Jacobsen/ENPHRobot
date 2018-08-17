@@ -26,24 +26,29 @@ a:hover {
 }
 
 // div classes
-
 .vFlexOnWidth {
     // 'Variable Flex on Width': change from "flex direction 'row'" to "flex direction 'column'" when going below $vFlexWidth
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100%;
-    // width: 100%;
-}
-
-.autoHeight {
-    height: auto;
+    height: 100%; // width: 100%;
 }
 
 .column {
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+}
+
+.verticalImageAndCaptions {
+    img {
+        margin-top: 40px;
+    }
+    img:first-of-type {
+        margin-top: 0px;
+    }
+    i {
+        width: 300px;
+        color: $titlecolor-kindalight;
+    }
 }
 
 .pageDiv {
@@ -51,7 +56,8 @@ a:hover {
     height: auto; // 100%;
     display: block;
     overflow: hidden;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -100,6 +106,18 @@ a:hover {
 }
 
 .codeDiv {}
+
+.makeMeThicc {
+    width: 100%;
+}
+
+.makeMeToll {
+    height: 100%;
+}
+
+.autoHeight {
+    height: auto;
+}
 
 // Positioning
 .halfWidth {
