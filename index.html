@@ -89,7 +89,6 @@
             <div class="vFlexOnWidth column verticalImageAndCaptions">
                 <img class="baseImg pcbImg" src="images/board.png">
                 <i>PCB Diagram</i>
-
                 <img class="baseImg anglePcbImg" src="images/angled_real_pcb.jpg">
                 <i>PCB complete with circuits elements. STM32F4 plugs in on the female headers visible in this image.</i>
             </div>
@@ -117,6 +116,23 @@
                     Electrical noise is an issue with any complex circuitry. We were able to quiet electrical noise issues by using a common
                     ground plane throughout the circuit board, placing a pair of decoupling capacitors at every IC, and by
                     powering the three main parts of the circuit board separately.
+                </p>
+
+                <br>
+
+                <h3>
+                    <i>Issues and solutions</i>
+                </h3>
+                <p>
+                    We had only one issue with the PCB itself: Some of the high-current traces were too thin and blew under heavy load (For example,
+                    our motor circuits). This issue was easily fixed by shorting those traces with thicker wire.
+                </p>
+                <p>
+                    We also had an issue that was more difficult to diagnose. We found that under harsh conditions (e.g. removing the load on
+                    the motors quickly by lifting the robot) created ground transience which travelled back into the STM32F4
+                    and fried it. To fix this issue, we added a Zener diode and capacitor in parallel on the input supply
+                    to prevent STM-Frying power spikes. We also added Schottky diodes parallel to the H-Bridge inputs in
+                    efforts to isolate them. After making these changes, we had no further issues.
                 </p>
             </div>
         </div>
