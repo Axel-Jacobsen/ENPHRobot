@@ -80,7 +80,7 @@
 
     <div class="pageDiv mechDiv" id="mechanical">
         <div class="vFlexOnWidth">
-
+            <h2>MECH MECH MECH MECH MECH</h2>
         </div>
     </div>
 
@@ -155,28 +155,54 @@
                     ribbon cable. Notice, even with the color distoriton, the network still found the Ewok.</i>
             </div>
             <div class="halfWidth rightSideText">
-                <h2 class="titleCard">Software</h2>
+                <h2 class="titleCard">Ewok Detection</h2>
                 <p>
-                    In order to navigate towards the Ewoks, we used computer vision. A Raspberry Pi on the robot continuously captured images
-                    of the course ahead using a fisheye camera, and these photos were processed using a Python implementation
-                    of the extremely fast YOLO network (paper | website) trained on over 2500 photos of the competition surface.
-                    During a run, the STM microcontroller would periodically request images from the Raspberry Pi. When it
-                    did, the network would find the coordinates of the bounding boxes around each Ewok in the frame, and
-                    we would calculate our heading error by finding the distance between the center of the frame and the
-                    center of the bounding box. This error was then written to an 8-bit digital to analog converter (a resistor
-                    ladder on our PCB) and the analog voltage was read by the STM. At the same time, an interrupt was triggered
-                    on the STM, telling it to stop the normal navigation loop, and turn to the heading indicated by the Raspberry
-                    Pi. This would turn the robot to face the next Ewok, and then the robot would continue driving towards
-                    it. By using computer vision, we were able to see the Ewoks much farther ahead than many of the other
-                    teams who were using pressure sensors or infrared light sensors. Because of this, we had to hard-code
-                    very few sections of the course, and could navigate directly from Ewok to Ewok. Given more time, a universal
-                    procedure with no hard-coded maneuvers could have been used to navigate any course with similar objectives,
-                    without needing prior knowledge of the layout. Issues: The camera still occasionally missed Ewoks in
-                    the frame, and the low framerate (~2.5s per frame) required the robot to take things very slowly during
-                    the run. Even more training photos could have helped to decrease the number of missed Ewoks, but for
-                    the network we were using, running on a Raspberry Pi we likely couldn’t improve on the framerate. A similar
-                    approach using a simpler network could have given more speed with the tradeoff of accuracy, which may
-                    have been a slight improvement on course.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pageDiv codeDiv">
+        <div class="vFlexOnWidth">
+            <div class="vFlexOnWidth column verticalImageAndCaptions">
+                <h4>STM32F4 Images</h4>
+
+                <img class="baseImg compImg" src="images/comp1.jpg">
+                <i>First image near the end of the ramp.</i>
+
+            </div>
+            <div class="halfWidth rightSideText">
+                <h2 class="titleCard">STM32F4 Microcontroller</h2>
+                <p>
+                    To control our robots, we were offered an Engineering Physics Arduino MCU called a TINAH board. However, we decided to use
+                    an STM32F4 ARM microcontroller. This decision gave us full control of the MCU and its peripherals.
+                </p>
+                <p>
+                    The STM32 controlled several different peripherals in different ways. Using the built-in timers, we produced Pulse-Width
+                    Modulation (PWM) waves to control the H-Bridge and the servos. Also on the built-in timers, we measured
+                    the output from encoders that were placed on our main drive wheels. This allowed us to drive and turn
+                    accurately.
+                </p>
+                <p>
+                    The STM32 also had several analog inputs via its Analog-to-Digital (ADC) converter, which we used to read heading from the
+                    Raspberry Pi and to gather inputs for the IR frequency detection. We set this system up with Direct Memory
+                    Access, which automatically converted values from the ADC and put it into a circular buffer.
+                </p>
+                <p>
+
+                    When we wanted to detect the frequency of the IR alarm signal, we could simply process the circular buffer with a Goertzel
+                    Filter to determine the signal's frequency.
+                </p>
+                <p>
+                    The voltage from the Raspberry Pi was used to determine how to navigate towards the Ewoks. This voltage was provided from
+                    a resistor ladder out of the Raspberry Pi, as it can only output digital voltages (i.e. either high voltage
+                    or low voltage). The analog voltage gave us an accurate angle to turn to in order to navigate to the
+                    Ewok.
+                </p>
+                <p>
+                    We also had full control over interrupts which allowed us to make important decisions (for example, 'drive away from this
+                    edge') quickly and easily.
                 </p>
             </div>
         </div>
