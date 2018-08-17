@@ -99,6 +99,15 @@ a:hover {
   color: #e0e0e0;
 }
 
+.compDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.compDiv .column {
+  width: 70%;
+}
+
 .makeMeThicc {
   width: 100%;
 }

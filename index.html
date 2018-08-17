@@ -290,12 +290,54 @@
     </div>
 
     <div class="pageDiv compDiv" id="comp">
-        <div class="vFlexOnWidth">
-            <h2>Competition Day</h2>
+        <div class="vFlexOnWidth column">
+            <h2 class="titleCard">Competition Day</h2>
+            <h3>
+                <i>
+                    Performance
+                </i>
+            </h3>
+            <p>
+                Vanessa performed well during testing, but had some difficulties during the competition. Due to the complexity of our approach,
+                we had difficulty integrating everything on time, and had to abandon our dream of a universal procedure with
+                no hard-coding in favor of a faster but less general strategy. We began our runs with a hardcoded 7 second
+                drive using the encoders to keep Vanessa straight, before she began looking for Ewoks. Since this maneuver
+                was completely hard-coded, Vanessa’s starting position had a large impact on her path up the ramp. During
+                the first run, she started too far left, and tracked off course, falling onto the PCB between the tracks
+                and breaking our main power connection. We managed to repair the wire in the 2 minutes between rounds, but
+                the first 3 attempts in round 2 had similar results, with Vanessa starting incorrectly and driving off the
+                course before the computer vision ever took over. On the final attempt of our second run, she finally made
+                it up the ramp far enough that the computer vision took over. From there, everything worked perfectly. She
+                tracked towards the first Ewok using the camera, crossed the 6 inch gap with no issues, tracked towards the
+                second Ewok, waited for the IR beacon, and proceeded through the gate without triggering the alarm. Unfortunately,
+                we hit our 2 minute time limit and had to stop before attempting to rescue the third Ewok. Overall, the individual
+                systems worked extremely well, but we underestimate the amount of time needed to integrate and test the control
+                system as a whole. If we had time to create a universal control loop that relied only on the inputs of the
+                various sensors and contained no hard-coded procedures, I think we would have performed much better on competition
+                day.
+            </p>
+            <br><br>
             <video width="640" height="360" controls>
                 <source src="images/best_run.mp4" type="video/mp4"> Your browser does not support the video tag.
                 <a href="https://www.google.com/chrome/">Get chrome here.</a>
             </video>
+            <i>Our (semi-successful) competition run</i>
+            <br><br><br>
+            <h3>
+                <i>
+                    Takeaways
+                </i>
+            </h3>
+            <p> Our 2 biggest takeaways were “integrate early” and “create components for production the first time”. We didn’t
+                leave ourselves enough time at the end of the project to properly integrate all of the components and work
+                out all of the bugs that come along with integration. This was partly due to time being spent fixing issues
+                caused by improper builds of early prototypes. During early testing, we used jumper wires which often came
+                loose and we carried the ciruit board on top of our robot rather than mounting it to the chassis as we had
+                in the final design. Our thinking was that this allowed us to quickly make changes to the circuits if needed,
+                but it ended up costing us in time spent debugging poor connections in a messy circuit. If we were to do
+                the project again, we would stil test each component individually, but once we knew that it worked, we would
+                integrate it properly (solder in all connections, mount everything to the chassis, etc) before moving on.
+            </p>
         </div>
     </div>
 
