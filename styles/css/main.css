@@ -146,10 +146,6 @@ a:hover {
   max-width: 230px;
 }
 
-.smallerTextinDiv p {
-  font-size: 1.2rem;
-}
-
 .baseImg {
   display: block;
   height: auto;
@@ -189,6 +185,16 @@ a:hover {
 .stmImg {
   max-height: 500px;
   max-width: 429px;
+}
+
+.sideImg {
+  max-height: 1000px;
+  max-width: 376px;
+}
+
+.earlyImg {
+  max-height: 570px;
+  max-width: 424px;
 }
 
 .shade {

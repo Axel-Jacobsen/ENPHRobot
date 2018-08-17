@@ -80,7 +80,48 @@
 
     <div class="pageDiv mechDiv" id="mechanical">
         <div class="vFlexOnWidth">
-            <h2>MECH MECH MECH MECH MECH</h2>
+            <div class="halfWidth">
+                <h2 class="titleCard">Mechanics</h2>
+                <p>
+                    The mechanical design was originally inspired by WWI tanks. We had the resources to explore alternative structural geometries,
+                    and through iteration our prototypes converged back to a tank build due to its ability to easily cross
+                    gaps and step up obstacles.
+                </p>
+                <p>
+                    The final build involved 72 tread links, which were 3D printed in PLA plastic and fitted with silicon tubing to increase
+                    grip. The treads were designed with sufficient tolerances so that they could be printed in a linked assembly,
+                    and were flexible enough that these 6 link sections could be snapped together by hand.
+                </p>
+                <p>
+                    The main chassis is composed of 2 pairs of aluminum plates. Each pair of plates encases 4 SolarBotics motors, which through
+                    an aluminum gear transimition, power the polycarbonate sprockets at opposite ends of the chassis. Two
+                    large free wheels near the center of mass hold the weight of the robot, reducing the amount of torque
+                    required to turn the robot.
+                </p>
+                <p>
+                    Two sheets of polycarbonate extend to the front of the chassis. These provide a mount for the camera, a mount for our largest
+                    battery (shifting the center of mass forwards to help with the step up gap), and housing for the servo
+                    motors and timing belts controlling the forward reaching arm and the parallel bar linkages lifting the
+                    basket.
+                </p>
+                <h3>
+                    <i>
+                        Issues and Solutions
+                    </i>
+                </h3>
+                <p>
+                    Mechanical issues were often due to the materials that we used, and our methods of constructing the components of the robot.
+                    For example, originally, we had a mono-walled track on which our motors were mounted. Here we had many
+                    rotating linkages supported on one end only, leading to large torques and unnecessary forces. Once we
+                    moved to our dual-walled track design, this issue was mitigated.
+                </p>
+            </div>
+            <div class="vFlexOnWidth column verticalImageAndCaptions">
+                <img class="baseImg earlyImg" src="images/early.jpg">
+                <i>Early mono-walled prototype</i>
+                <img class="baseImg sideImg" src="images/side.JPG">
+                <i>Final dual-walled desgign, showing internal motors within the tracks</i>
+            </div>
         </div>
     </div>
 
@@ -92,7 +133,7 @@
                 <img class="baseImg anglePcbImg" src="images/angled_real_pcb.jpg">
                 <i>PCB complete with circuits elements. STM32F4 plugs in on the female headers visible in this image.</i>
             </div>
-            <div class="halfWidth smallerTextinDiv">
+            <div class="halfWidth">
                 <h2 class="titleCard">Electronics</h2>
                 <p>
                     Our electronics were composed of three main systems: the STM32F4 Microcontroller (MCU), the Raspberry Pi, and our PCB which
@@ -100,7 +141,7 @@
                     into a single printed circuit board, which we designed using Autodesk Eagle (the PCB diagram can be seen
                     right). The Raspberry Pi and our STM32F4 MCU plugged right into the top and bottom of the board. Printing
                     the circuit board allowed us to bundle up the "brains" of our robot between the two tracks, making our
-                    electrical design compact and robust. // Better words for "making our electrical design compact and robust."
+                    electrical design compact and robust.
                 </p>
                 <br>
                 <p>
@@ -195,12 +236,7 @@
 
     <div class="pageDiv codeDiv">
         <div class="vFlexOnWidth">
-            <div class="vFlexOnWidth column verticalImageAndCaptions">
-                <img class="baseImg stmImg" src="images/stm32.png">
-                <i>STM32F4 Microcontroller</i>
-
-            </div>
-            <div class="halfWidth rightSideText">
+            <div class="halfWidth">
                 <h2 class="titleCard">STM32F4 Microcontroller</h2>
                 <p>
                     To control our robots, we were offered an Engineering Physics Arduino MCU called a TINAH board. However, we decided to use
@@ -246,6 +282,10 @@
                     us more reliable code with no noticeable cost to efficiency.
                 </p>
             </div>
+            <div class="vFlexOnWidth column verticalImageAndCaptions">
+                <img class="baseImg stmImg" src="images/stm32.png">
+                <i>STM32F4 Microcontroller</i>
+            </div>
         </div>
     </div>
 
@@ -253,8 +293,7 @@
         <div class="vFlexOnWidth">
             <h2>Competition Day</h2>
             <video width="640" height="360" controls>
-                <source src="images/best_run.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                <source src="images/best_run.mp4" type="video/mp4"> Your browser does not support the video tag.
                 <a href="https://www.google.com/chrome/">Get chrome here.</a>
             </video>
         </div>
