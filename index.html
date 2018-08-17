@@ -60,7 +60,7 @@
             <div class="halfWidth rightSideText">
                 <h2 class="titleCard">Strategy</h2>
                 <p>
-                    Our team took an unique approach to this challenge.
+                    Our team took a unique approach to this challenge.
                 </p>
                 <p>
                     To navigate to Ewoks, a RaspberryPi was running a machine learning algorithm called
@@ -73,7 +73,7 @@
                 </p>
                 <p>
                     We chose a treaded robot in order to traverse the gaps. This let us roll over the gaps instead of taking time to deploy a
-                    bridge that may be misplaced. Treads gave our robot reliability, as well as allowing us to focus on other
+                    bridge that may be misplaced. Treads gave our robot reliability, and allowed us to focus on other
                     aspects of the competition.
                 </p>
             </div>
@@ -86,9 +86,9 @@
             <div class="halfWidth">
                 <h2 class="titleCard">Mechanics</h2>
                 <p>
-                    The mechanical design was originally inspired by WWI tanks. We had the resources to explore alternative structural geometries,
-                    and through iteration our prototypes converged back to a tank build due to its ability to easily cross
-                    gaps and step up obstacles.
+                    The mechanical design was originally inspired by WWI tanks. We had the resources to explore alternative geometries,
+                    but through iteration our prototypes converged back to a tank build due to its ability to easily cross
+                    gaps and step-up obstacles.
                 </p>
                 <p>
                     The final build involved 72 tread links, which were 3D printed in PLA plastic and fitted with silicon tubing to increase
@@ -98,13 +98,13 @@
                 <p>
                     The main chassis is composed of 2 pairs of aluminum plates. Each pair of plates encases 4 SolarBotics motors, which through
                     an aluminum gear transimition, power the polycarbonate sprockets at opposite ends of the chassis. Two
-                    large free wheels near the center of mass hold the weight of the robot, reducing the amount of torque
+                    large free wheels near the center of mass hold the weight of the robot and shorten its wheelbase, reducing the amount of torque
                     required to turn the robot.
                 </p>
                 <p>
                     Two sheets of polycarbonate extend to the front of the chassis. These provide a mount for the camera, a mount for our largest
                     battery (shifting the center of mass forwards to help with the step up gap), and housing for the servo
-                    motors and timing belts controlling the forward reaching arm and the parallel bar linkages lifting the
+                    motors and timing belts which control the forward reaching arm and the parallel bar linkage for lifting the
                     basket.
                 </p>
                 <h3>
@@ -115,7 +115,7 @@
                 <p>
                     Mechanical issues were often due to the materials that we used, and our methods of constructing the components of the robot.
                     For example, originally, we had a mono-walled track on which our motors were mounted. Here we had many
-                    rotating linkages supported on one end only, leading to large torques and unnecessary forces. Once we
+                    rotating linkages supported on one end only, leading to large torques and unnecessary forces due to misalignment. Once we
                     moved to our dual-walled track design, this issue was mitigated.
                 </p>
             </div>
@@ -139,9 +139,9 @@
             <div class="halfWidth">
                 <h2 class="titleCard">Electronics</h2>
                 <p>
-                    Our electronics were composed of three main systems: the STM32F4 Microcontroller (MCU), the Raspberry Pi, and our PCB which
+                    Our electronics were composed of three main systems: the STM32F4 Microcontroller (MCU), the Raspberry Pi, and our printed circuit board (PCB) which
                     interfaced the STM32F4, Raspberry Pi, and all of our sensors. The circuitry of the robot was integrated
-                    into a single printed circuit board, which we designed using Autodesk Eagle (the PCB diagram can be seen
+                    into a single PCB, which we designed using Autodesk Eagle (the PCB diagram can be seen
                     right). The Raspberry Pi and our STM32F4 MCU plugged right into the top and bottom of the board. Printing
                     the circuit board allowed us to bundle up the "brains" of our robot between the two tracks, making our
                     electrical design compact and robust.
@@ -172,7 +172,7 @@
                     our motor circuits). This issue was easily fixed by shorting those traces with thicker wire.
                 </p>
                 <p>
-                    We also had an issue that was more difficult to diagnose. We found that under harsh conditions (e.g. removing the load on
+                    We also had an issue that was more difficult to diagnose. We found that harsh conditions (e.g. removing the load on
                     the motors quickly by lifting the robot) created ground transience which travelled back into the STM32F4
                     and fried it. To fix this issue, we added a Zener diode and capacitor in parallel on the input supply
                     to prevent STM-Frying power spikes. We also added Schottky diodes parallel to the H-Bridge inputs in
@@ -228,9 +228,9 @@
                 <p>
                     The camera still occasionally missed Ewoks in the frame, and the low framerate (~2.5s per frame) required the robot to take
                     things very slowly during the run. Even more training photos could have helped to decrease the number
-                    of missed Ewoks, but for the network, we were using, running on a Raspberry Pi we likely couldn’t improve
+                    of missed Ewoks, but for the network we were using (especially running on a Raspberry Pi) we likely couldn’t improve
                     on the framerate. A similar approach using a simpler network could have given more speed with the tradeoff
-                    of accuracy, which may have been a slight improvement on course.
+                    of accuracy, which may have been a slight improvement on course. With less restrictive competition rules, the images could have been sent to a more powerful computer for processing, allowing us to achieve framerates of around 30FPS.
 
                 </p>
             </div>
@@ -352,7 +352,7 @@
                     <i>Ben Holmes</i>
                     <img class="baseImg humanImg" src="images/ben.jpeg">
                     <p class="humanText">
-                        - Machine Learning
+                        - Computer Vision
                         <br> - Mechanics
                     </p>
                 </div>
