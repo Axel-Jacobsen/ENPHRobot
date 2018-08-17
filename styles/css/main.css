@@ -124,6 +124,10 @@ a:hover {
   text-align: right;
 }
 
+.leftSideText {
+  text-align: left;
+}
+
 .titleCard {
   font-size: 3rem;
   color: #444343;
@@ -139,6 +143,10 @@ a:hover {
 
 .humanText {
   max-width: 230px;
+}
+
+.smallerTextinDiv p {
+  font-size: 1.2rem;
 }
 
 .baseImg {
@@ -170,6 +178,11 @@ a:hover {
 .compImg {
   max-height: 300px;
   max-width: 300px;
+}
+
+.anglePcbImg {
+  max-height: 675px;
+  max-width: 675px/4048px/3036px;
 }
 
 .shade {

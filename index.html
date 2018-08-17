@@ -86,33 +86,37 @@
 
     <div class="pageDiv elecDiv" id="electrical">
         <div class="vFlexOnWidth vReverseColumn">
-            <img class="baseImg pcbImg" src="images/board.png">
-            <div class="halfWidth rightSideText">
+            <div class="vFlexOnWidth column verticalImageAndCaptions">
+                <img class="baseImg pcbImg" src="images/board.png">
+                <i>PCB Diagram</i>
+
+                <img class="baseImg anglePcbImg" src="images/angled_real_pcb.jpg">
+                <i>PCB complete with circuits elements. STM32F4 plugs in on the female headers visible in this image.</i>
+            </div>
+            <div class="halfWidth smallerTextinDiv">
                 <h2 class="titleCard">Electronics</h2>
                 <p>
-                    The electrical circuitry of the robot was all integrated into a single printed circuitboard, which we designed ourselves
-                    using Autodesk Eagle. Printing the circuit board allowed us to bundle up the "brains" of our robot in
-                    a small volume able to fit between the two tracks, making our design compact, yet still robust. We blew
-                    some traces powering our motors a few times. We also had to make the circuits we designed somewhat adaptable
-                    on the circuit board, in case a design changed during the development of our robot. To do this, we used
-                    common IC packages as much as possible, and kept them all at the same power and ground rails. Our single
-                    circuit board was comprised of two h-bridge motor drivers; a switching voltage regulator and a couple
-                    of resistors which were used to control all the servos in the robot (the basket and claw mechanisms);
-                    another switching voltage regulator to power the STM32 F4 MCU and Raspberry Pi (which fitted into the
-                    board as if it were a giant shield); a linear voltage regulator to provide a separate clean power supply
-                    for the ICs; two rail-to-rail amplifiers which were used to amplify infrared signals for the MCU to process
-                    digitally; and four opto-sensor comparator circuits which use infrared transmission and reflection to
-                    detect edges and nearby obstacles; and another infrared beam which tripped when an ewok entered the claw
-                    and alerted us to capture it. We were able to placate any potential noise issues by using a common ground
-                    plane throughout the circuit board, placing a pair of decoupling capacitors at every IC, and by powering
-                    the three main parts of the circuit board separately. The motor drivers and MCUs were powered by the
-                    main battery. The servos were powered by another battery, and the ICs were powered by a separate battery.
-                    Issues: some of the trace widths were too small, and blew when high current past through them (i.e. motors).
-                    We also found that under harsh conditions (lifting the robot so there is no load on the motors when driven
-                    fully) created ground transience which travelled back into the STM and fried it. To fix this issue, we
-                    added a zener diode and capacitor in parallel on the input supply to prevent power spikes from frying
-                    it. We also added parallel shocky diodes on the hbridge signals try isolate them. (edited) we can also
-                    get diagrams of the circuits from eagle if we want to describe how each of them work individually
+                    Our electronics were composed of three main systems: the STM32F4 Microcontroller (MCU), the Raspberry Pi, and our PCB which
+                    interfaced the STM32F4, Raspberry Pi, and all of our sensors. The circuitry of the robot was integrated
+                    into a single printed circuit board, which we designed using Autodesk Eagle (the PCB diagram can be seen
+                    right). The Raspberry Pi and our STM32F4 MCU plugged right into the top and bottom of the board. Printing
+                    the circuit board allowed us to bundle up the "brains" of our robot between the two tracks, making our
+                    electrical design compact and robust. // Better words for "making our electrical design compact and robust."
+                </p>
+                <br>
+                <p>
+                    Our PCB was composed of several circuits:
+                    <br> - Two H-Bridge circuits (to drive our motors)
+                    <br> - Basic circuitry from the MCU to control the servos (to actuate the basket and claw)
+                    <br> - Two rail-to-rail amplifiers for the IR sensors (to amplify the signal for digital processing)
+                    <br> - Four reflective optical detector circuits (to find edges and obstructions in our paths)
+                    <br> - One optical detector circuit (across the claw to detect when an Ewok was in its grasp).
+                </p>
+                <br>
+                <p>
+                    Electrical noise is an issue with any complex circuitry. We were able to quiet electrical noise issues by using a common
+                    ground plane throughout the circuit board, placing a pair of decoupling capacitors at every IC, and by
+                    powering the three main parts of the circuit board separately.
                 </p>
             </div>
         </div>
@@ -122,15 +126,17 @@
         <div class="vFlexOnWidth">
             <div class="vFlexOnWidth column verticalImageAndCaptions">
                 <h4>Onboard images from competition</h4>
-                
+
                 <img class="baseImg compImg" src="images/comp1.jpg">
                 <i>First image near the end of the ramp.</i>
 
                 <img class="baseImg compImg" src="images/comp2.jpg">
-                <i>Second image, just before the first Ewok. The horizontal lines are due to damage to the ribbon cable from the camera to the Rasberry Pi.</i>
+                <i>Second image, just before the first Ewok. The horizontal lines are due to damage to the ribbon cable from
+                    the camera to the Rasberry Pi.</i>
 
                 <img class="baseImg compImg" src="images/comp3.jpg">
-                <i>Third image, right after the first gap. The miscoloration is due again to damage to the damage to the camera's ribbon cable. Notice, even with the color distoriton, the network still found the Ewok.</i>
+                <i>Third image, right after the first gap. The miscoloration is due again to damage to the damage to the camera's
+                    ribbon cable. Notice, even with the color distoriton, the network still found the Ewok.</i>
             </div>
             <div class="halfWidth rightSideText">
                 <h2 class="titleCard">Software</h2>
@@ -162,7 +168,7 @@
 
     <div class="pageDiv compDiv" id="comp">
         <div class="vFlexOnWidth">
-    
+
         </div>
     </div>
 

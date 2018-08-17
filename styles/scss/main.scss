@@ -26,6 +26,7 @@ a:hover {
 }
 
 // div classes
+
 .vFlexOnWidth {
     // 'Variable Flex on Width': change from "flex direction 'row'" to "flex direction 'column'" when going below $vFlexWidth
     display: flex;
@@ -134,7 +135,13 @@ a:hover {
     text-align: right;
 }
 
+.leftSideText {
+    text-align: left;
+}
+
+
 // Text styling
+
 .titleCard {
     font-size: 3rem;
     color: $titlecolor;
@@ -150,6 +157,12 @@ a:hover {
 
 .humanText {
     max-width: 230px;
+}
+
+.smallerTextinDiv {
+    p {
+        font-size: 1.2rem;
+    }
 }
 
 // Images
@@ -182,6 +195,11 @@ a:hover {
 .compImg {
     max-height: 300px;
     max-width: 300px;
+}
+
+.anglePcbImg {
+    max-height: 675px;
+    max-width: 675px / 4048px / 3036px;
 }
 
 // Reactive
