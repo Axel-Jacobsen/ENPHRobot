@@ -26,7 +26,6 @@ a:hover {
 }
 
 // div classes
-
 .vFlexOnWidth {
     // 'Variable Flex on Width': change from "flex direction 'row'" to "flex direction 'column'" when going below $vFlexWidth
     display: flex;
@@ -95,7 +94,8 @@ a:hover {
 
 .elecDiv {
     background-color: $elecDiv-color;
-    h2, h3 {
+    h2,
+    h3 {
         color: $titlecolor-white;
     }
     p {
@@ -139,9 +139,7 @@ a:hover {
     text-align: left;
 }
 
-
 // Text styling
-
 .titleCard {
     font-size: 3rem;
     color: $titlecolor;
@@ -200,6 +198,11 @@ a:hover {
 .anglePcbImg {
     max-height: 675px;
     max-width: 675px / 4048px / 3036px;
+}
+
+.stmImg {
+    max-height: 500px;
+    max-width: 429px;
 }
 
 // Reactive

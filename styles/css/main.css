@@ -88,7 +88,8 @@ a:hover {
 .elecDiv {
   background-color: #1a1a1a;
 }
-.elecDiv h2, .elecDiv h3 {
+.elecDiv h2,
+.elecDiv h3 {
   color: #f7f7f7;
 }
 .elecDiv p {
@@ -183,6 +184,11 @@ a:hover {
 .anglePcbImg {
   max-height: 675px;
   max-width: 675px/4048px/3036px;
+}
+
+.stmImg {
+  max-height: 500px;
+  max-width: 429px;
 }
 
 .shade {
