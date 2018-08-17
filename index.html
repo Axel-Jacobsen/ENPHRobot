@@ -157,6 +157,36 @@
             <div class="halfWidth rightSideText">
                 <h2 class="titleCard">Ewok Detection</h2>
                 <p>
+                    In order to navigate towards the Ewoks, we used computer vision. A Raspberry Pi on the robot continuously captured images
+                    of the course ahead using a fisheye camera, and these photos were processed using a Python implementation
+                    of the extremely fast
+                    <a href="https://pjreddie.com/darknet/yolo/">YOLO network</a> trained on over 2500 photos of the competition surface.
+                </p>
+                <p>
+                    During a run, the STM microcontroller would periodically request images from the Raspberry Pi. When it did, the network would
+                    find the coordinates of the bounding boxes around each Ewok in the frame, and we would calculate our
+                    heading error by finding the distance between the centre of the frame and the centre of the bounding
+                    box. This error was then written to an 8-bit digital to analog converter (a resistor ladder on our PCB)
+                    and the analog voltage was read by the STM. This would turn the robot to face the next Ewok, and then
+                    the robot would continue driving towards it.
+                </p>
+                <p>
+                    By using computer vision, we were able to see the Ewoks much farther ahead than many of the other teams who were using pressure
+                    sensors or infrared light sensors. Because of this, we had to hard-code very few sections of the course
+                    and could navigate directly from Ewok to Ewok. Given more time, a universal procedure with no hard-coded
+                    manoeuvres could have been used to navigate any course with similar objectives, without needing prior
+                    knowledge of the layout.
+                </p>
+
+                <h3>
+                    <i>Issues and solutions</i>
+                </h3>
+                <p>
+                    The camera still occasionally missed Ewoks in the frame, and the low framerate (~2.5s per frame) required the robot
+                    to take things very slowly during the run. Even more training photos could have helped to decrease the
+                    number of missed Ewoks, but for the network, we were using, running on a Raspberry Pi we likely couldn’t
+                    improve on the framerate. A similar approach using a simpler network could have given more speed with
+                    the tradeoff of accuracy, which may have been a slight improvement on course.
 
                 </p>
             </div>
@@ -203,6 +233,19 @@
                 <p>
                     We also had full control over interrupts which allowed us to make important decisions (for example, 'drive away from this
                     edge') quickly and easily.
+                </p>
+
+                <h3>
+                    <i>Issues and solutions</i>
+                </h3>
+                <p>
+                    The software was written in C. Therefore, we had to be careful with overflows and specifying datatypes. A benefit that this
+                    decision gave us was fast and efficient code. The disadvantages were errors with datatypes (e.g. overflows
+                    on arrays or signed integer errors).</p>
+                <p>
+                    A larger issue was the interrupts; initially, we had many interrupts that gave us issues such as unexpected triggers and
+                    high trigger frequency. Our solution was to remove our dependence on troublesome interrupts, which gave
+                    us more reliable code with no noticeable cost to efficiency.
                 </p>
             </div>
         </div>
