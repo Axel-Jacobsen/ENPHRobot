@@ -6,4 +6,4 @@ This website was developed to record our result of ENPH 253, the notorious robot
 
 ## Developing
 
-I am using [sass](https://sass-lang.com/guide) which just makes your life so much easier. When developing, make sure you are running `sass --watch styles/scss:styles:css`in the root directory to compile the sass to css. Sass is pretty much the same as CSS but you can do nice things like nesting and using variables easily.
+I am using [sass](https://sass-lang.com/guide) which just makes your life so much easier. When developing, make sure you are running `sass --watch styles/scss:styles:css`in the root directory to compile the sass to css. Sass is pretty much the same as CSS but you can do nice things like neat nesting and the ability to use variables/snippets.
