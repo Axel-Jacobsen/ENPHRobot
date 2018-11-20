@@ -256,9 +256,9 @@
                     Access, which automatically converted values from the ADC and put it into a circular buffer.
                 </p>
                 <p>
-
-                    When we wanted to detect the frequency of the IR alarm signal, we could simply process the circular buffer with a Goertzel
-                    Filter to determine the signal's frequency.
+		    A major component of the competition was the detection of IR signals; the identification of a 1 kHz vs a 10 kHz signal meant the difference of a successful and unsuccessful run. To identify the signals with ease and simplicity, we chose to process the signal digitally.
+                    When we wanted to detect the frequency of the IR alarm signal, we filled a buffer with raw voltage data from an IR detecting transistor. Then, we could simply process the circular buffer with a Goertzel
+		    Filter to determine the signal's frequency. More information about this can be found in <a href="https://github.com/Axel-Jacobsen/DigitalFiltering">Digital Filtering</a>
                 </p>
                 <p>
                     The voltage from the Raspberry Pi was used to determine how to navigate towards the Ewoks. This voltage was provided from
