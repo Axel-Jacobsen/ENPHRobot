@@ -1,11 +1,12 @@
 @import 'variables';
+
 // Tag changes
 body,
 html {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
@@ -175,8 +176,9 @@ a:hover {
 // Text styling
 .titleCard {
     font-size: 3rem;
+    font-style: "Roboto Mono";
     color: $titlecolor;
-    margin: 0;
+    margin-bottom: 50px;
 }
 
 .mainLinks {
@@ -184,6 +186,9 @@ a:hover {
     line-height: 1.75;
     display: flex;
     flex-direction: column;
+    a {
+        border-bottom: 0.5px;
+    }
 }
 
 .humanText {

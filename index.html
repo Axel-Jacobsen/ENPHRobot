@@ -5,17 +5,16 @@
     <link rel="stylesheet" href="styles/css/main.css">
     <title>Vanessa</Title>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Lato');
-    </style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Mono');    </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131351116-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131351116-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push( arguments ); }
+        gtag( 'js', new Date() );
 
-  gtag('config', 'UA-131351116-2');
-</script>
+        gtag( 'config', 'UA-131351116-2' );
+    </script>
 
 
 </head>
@@ -43,15 +42,18 @@
             <div class="halfWidth">
                 <h2 class="titleCard">The Problem</h2>
                 <p>
-                    Four Ewoks and Chewbacca are trapped in the Empire Stronghold! Our task was to create an autonomous robot to navigate the
+                    Four Ewoks and Chewbacca are trapped in the Empire Stronghold! Our task was to create an autonomous
+                    robot to navigate the
                     stronghold and return the prisoners to the start of the course.
                 </p>
                 <p>
-                    To do this, we had to navigate over gaps, identify and react to alternating IR frequencies, climb a ramp, and deploy a basket
+                    To do this, we had to navigate over gaps, identify and react to alternating IR frequencies, climb a
+                    ramp, and deploy a basket
                     to return our captured critters.
                 </p>
                 <p>
-                    This is a diagram of the competition surface. It shows the positions of the Ewoks and Chewbacca, the gaps that we had to
+                    This is a diagram of the competition surface. It shows the positions of the Ewoks and Chewbacca,
+                    the gaps that we had to
                     cross, and the position and direction of the IR sensors.
                 </p>
             </div>
@@ -77,12 +79,15 @@
                     <a href="https://pjreddie.com/darknet/yolo/">YOLO</a> to find their locations.
                 </p>
                 <p>
-                    This RaspberryPi would send signals to a microcontroller (STM32F4) that was processing signals and making decisions. The
-                    microcontroller would request directions to an Ewok when it was ready, allowing us to navigate purely
+                    This RaspberryPi would send signals to a microcontroller (STM32F4) that was processing signals and
+                    making decisions. The
+                    microcontroller would request directions to an Ewok when it was ready, allowing us to navigate
+                    purely
                     by finding Ewoks, and not by following tape.
                 </p>
                 <p>
-                    We chose a treaded robot in order to traverse the gaps. This let us roll over the gaps instead of taking time to deploy a
+                    We chose a treaded robot in order to traverse the gaps. This let us roll over the gaps instead of
+                    taking time to deploy a
                     bridge that may be misplaced. Treads gave our robot reliability, and allowed us to focus on other
                     aspects of the competition.
                 </p>
@@ -96,25 +101,35 @@
             <div class="halfWidth">
                 <h2 class="titleCard">Mechanics</h2>
                 <p>
-                    The mechanical design was originally inspired by WWI tanks. We had the resources to explore alternative geometries,
-                    but through iteration our prototypes converged back to a tank build due to its ability to easily cross
+                    The mechanical design was originally inspired by WWI tanks. We had the resources to explore
+                    alternative geometries,
+                    but through iteration our prototypes converged back to a tank build due to its ability to easily
+                    cross
                     gaps and step-up obstacles.
                 </p>
                 <p>
-                    The final build involved 72 tread links, which were 3D printed in PLA plastic and fitted with silicon tubing to increase
-                    grip. The treads were designed with sufficient tolerances so that they could be printed in a linked assembly,
+                    The final build involved 72 tread links, which were 3D printed in PLA plastic and fitted with
+                    silicon tubing to increase
+                    grip. The treads were designed with sufficient tolerances so that they could be printed in a linked
+                    assembly,
                     and were flexible enough that these 6 link sections could be snapped together by hand.
                 </p>
                 <p>
-                    The main chassis is composed of 2 pairs of aluminum plates. Each pair of plates encases 4 SolarBotics motors, which through
-                    an aluminum gear transimition, power the polycarbonate sprockets at opposite ends of the chassis. Two
-                    large free wheels near the center of mass hold the weight of the robot and shorten its wheelbase, reducing the amount of torque
+                    The main chassis is composed of 2 pairs of aluminum plates. Each pair of plates encases 4
+                    SolarBotics motors, which through
+                    an aluminum gear transimition, power the polycarbonate sprockets at opposite ends of the chassis.
+                    Two
+                    large free wheels near the center of mass hold the weight of the robot and shorten its wheelbase,
+                    reducing the amount of torque
                     required to turn the robot.
                 </p>
                 <p>
-                    Two sheets of polycarbonate extend to the front of the chassis. These provide a mount for the camera, a mount for our largest
-                    battery (shifting the center of mass forwards to help with the step up gap), and housing for the servo
-                    motors and timing belts which control the forward reaching arm and the parallel bar linkage for lifting the
+                    Two sheets of polycarbonate extend to the front of the chassis. These provide a mount for the
+                    camera, a mount for our largest
+                    battery (shifting the center of mass forwards to help with the step up gap), and housing for the
+                    servo
+                    motors and timing belts which control the forward reaching arm and the parallel bar linkage for
+                    lifting the
                     basket.
                 </p>
                 <h3>
@@ -123,9 +138,12 @@
                     </i>
                 </h3>
                 <p>
-                    Mechanical issues were often due to the materials that we used, and our methods of constructing the components of the robot.
-                    For example, originally, we had a mono-walled track on which our motors were mounted. Here we had many
-                    rotating linkages supported on one end only, leading to large torques and unnecessary forces due to misalignment. Once we
+                    Mechanical issues were often due to the materials that we used, and our methods of constructing the
+                    components of the robot.
+                    For example, originally, we had a mono-walled track on which our motors were mounted. Here we had
+                    many
+                    rotating linkages supported on one end only, leading to large torques and unnecessary forces due to
+                    misalignment. Once we
                     moved to our dual-walled track design, this issue was mitigated.
                 </p>
             </div>
@@ -149,11 +167,15 @@
             <div class="halfWidth">
                 <h2 class="titleCard">Electronics</h2>
                 <p>
-                    Our electronics were composed of three main systems: the STM32F4 Microcontroller (MCU), the Raspberry Pi, and our printed circuit board (PCB) which
-                    interfaced the STM32F4, Raspberry Pi, and all of our sensors. The circuitry of the robot was integrated
+                    Our electronics were composed of three main systems: the STM32F4 Microcontroller (MCU), the
+                    Raspberry Pi, and our printed circuit board (PCB) which
+                    interfaced the STM32F4, Raspberry Pi, and all of our sensors. The circuitry of the robot was
+                    integrated
                     into a single PCB, which we designed using Autodesk Eagle (the PCB diagram can be seen
-                    right). The Raspberry Pi and our STM32F4 MCU plugged right into the top and bottom of the board. Printing
-                    the circuit board allowed us to bundle up the "brains" of our robot between the two tracks, making our
+                    right). The Raspberry Pi and our STM32F4 MCU plugged right into the top and bottom of the board.
+                    Printing
+                    the circuit board allowed us to bundle up the "brains" of our robot between the two tracks, making
+                    our
                     electrical design compact and robust.
                 </p>
                 <br>
@@ -161,14 +183,17 @@
                     Our PCB was composed of several circuits:
                     <br> - Two H-Bridge circuits (to drive our motors)
                     <br> - Basic circuitry from the MCU to control the servos (to actuate the basket and claw)
-                    <br> - Two rail-to-rail amplifiers for the IR sensors (to amplify the signal for digital processing)
+                    <br> - Two rail-to-rail amplifiers for the IR sensors (to amplify the signal for digital
+                    processing)
                     <br> - Four reflective optical detector circuits (to find edges and obstructions in our paths)
                     <br> - One optical detector circuit (across the claw to detect when an Ewok was in its grasp).
                 </p>
                 <br>
                 <p>
-                    Electrical noise is an issue with any complex circuitry. We were able to quiet electrical noise issues by using a common
-                    ground plane throughout the circuit board, placing a pair of decoupling capacitors at every IC, and by
+                    Electrical noise is an issue with any complex circuitry. We were able to quiet electrical noise
+                    issues by using a common
+                    ground plane throughout the circuit board, placing a pair of decoupling capacitors at every IC, and
+                    by
                     powering the three main parts of the circuit board separately.
                 </p>
 
@@ -178,14 +203,19 @@
                     <i>Issues and solutions</i>
                 </h3>
                 <p>
-                    We had only one issue with the PCB itself: Some of the high-current traces were too thin and blew under heavy load (For example,
+                    We had only one issue with the PCB itself: Some of the high-current traces were too thin and blew
+                    under heavy load (For example,
                     our motor circuits). This issue was easily fixed by shorting those traces with thicker wire.
                 </p>
                 <p>
-                    We also had an issue that was more difficult to diagnose. We found that harsh conditions (e.g. removing the load on
-                    the motors quickly by lifting the robot) created ground transience which travelled back into the STM32F4
-                    and fried it. To fix this issue, we added a Zener diode and capacitor in parallel on the input supply
-                    to prevent STM-Frying power spikes. We also added Schottky diodes parallel to the H-Bridge inputs in
+                    We also had an issue that was more difficult to diagnose. We found that harsh conditions (e.g.
+                    removing the load on
+                    the motors quickly by lifting the robot) created ground transience which travelled back into the
+                    STM32F4
+                    and fried it. To fix this issue, we added a Zener diode and capacitor in parallel on the input
+                    supply
+                    to prevent STM-Frying power spikes. We also added Schottky diodes parallel to the H-Bridge inputs
+                    in
                     efforts to isolate them. After making these changes, we had no further issues.
                 </p>
             </div>
@@ -201,34 +231,48 @@
                 <i>First image near the end of the ramp.</i>
 
                 <img class="baseImg compImg" src="images/comp2.jpg">
-                <i>Second image, just before the first Ewok. The horizontal lines are due to damage to the ribbon cable from
+                <i>Second image, just before the first Ewok. The horizontal lines are due to damage to the ribbon cable
+                    from
                     the camera to the Rasberry Pi.</i>
 
                 <img class="baseImg compImg" src="images/comp3.jpg">
-                <i>Third image, right after the first gap. The miscoloration is due again to damage to the damage to the camera's
+                <i>Third image, right after the first gap. The miscoloration is due again to damage to the damage to
+                    the camera's
                     ribbon cable. Notice, even with the color distoriton, the network still found the Ewok.</i>
             </div>
             <div class="halfWidth">
                 <h2 class="titleCard">Ewok Detection</h2>
                 <p>
-                    In order to navigate towards the Ewoks, we used computer vision. A Raspberry Pi on the robot continuously captured images
-                    of the course ahead using a fisheye camera, and these photos were processed using a Python implementation
+                    In order to navigate towards the Ewoks, we used computer vision. A Raspberry Pi on the robot
+                    continuously captured images
+                    of the course ahead using a fisheye camera, and these photos were processed using a Python
+                    implementation
                     of the extremely fast
-                    <a href="https://pjreddie.com/darknet/yolo/">YOLO network</a> trained on over 2500 photos of the competition surface.
+                    <a href="https://pjreddie.com/darknet/yolo/">YOLO network</a> trained on over 2500 photos of the
+                    competition surface.
                 </p>
                 <p>
-                    During a run, the STM microcontroller would periodically request images from the Raspberry Pi. When it did, the network would
-                    find the coordinates of the bounding boxes around each Ewok in the frame, and we would calculate our
-                    heading error by finding the distance between the centre of the frame and the centre of the bounding
-                    box. This error was then written to an 8-bit digital to analog converter (a resistor ladder on our PCB)
-                    and the analog voltage was read by the STM. This would turn the robot to face the next Ewok, and then
+                    During a run, the STM microcontroller would periodically request images from the Raspberry Pi. When
+                    it did, the network would
+                    find the coordinates of the bounding boxes around each Ewok in the frame, and we would calculate
+                    our
+                    heading error by finding the distance between the centre of the frame and the centre of the
+                    bounding
+                    box. This error was then written to an 8-bit digital to analog converter (a resistor ladder on our
+                    PCB)
+                    and the analog voltage was read by the STM. This would turn the robot to face the next Ewok, and
+                    then
                     the robot would continue driving towards it.
                 </p>
                 <p>
-                    By using computer vision, we were able to see the Ewoks much farther ahead than many of the other teams who were using pressure
-                    sensors or infrared light sensors. Because of this, we had to hard-code very few sections of the course
-                    and could navigate directly from Ewok to Ewok. Given more time, a universal procedure with no hard-coded
-                    manoeuvres could have been used to navigate any course with similar objectives, without needing prior
+                    By using computer vision, we were able to see the Ewoks much farther ahead than many of the other
+                    teams who were using pressure
+                    sensors or infrared light sensors. Because of this, we had to hard-code very few sections of the
+                    course
+                    and could navigate directly from Ewok to Ewok. Given more time, a universal procedure with no
+                    hard-coded
+                    manoeuvres could have been used to navigate any course with similar objectives, without needing
+                    prior
                     knowledge of the layout.
                 </p>
 
@@ -236,11 +280,17 @@
                     <i>Issues and solutions</i>
                 </h3>
                 <p>
-                    The camera still occasionally missed Ewoks in the frame, and the low framerate (~2.5s per frame) required the robot to take
-                    things very slowly during the run. Even more training photos could have helped to decrease the number
-                    of missed Ewoks, but for the network we were using (especially running on a Raspberry Pi) we likely couldn’t improve
-                    on the framerate. A similar approach using a simpler network could have given more speed with the tradeoff
-                    of accuracy, which may have been a slight improvement on course. With less restrictive competition rules, the images could have been sent to a more powerful computer for processing, allowing us to achieve framerates of around 30FPS.
+                    The camera still occasionally missed Ewoks in the frame, and the low framerate (~2.5s per frame)
+                    required the robot to take
+                    things very slowly during the run. Even more training photos could have helped to decrease the
+                    number
+                    of missed Ewoks, but for the network we were using (especially running on a Raspberry Pi) we likely
+                    couldn’t improve
+                    on the framerate. A similar approach using a simpler network could have given more speed with the
+                    tradeoff
+                    of accuracy, which may have been a slight improvement on course. With less restrictive competition
+                    rules, the images could have been sent to a more powerful computer for processing, allowing us to
+                    achieve framerates of around 30FPS.
 
                 </p>
             </div>
@@ -252,33 +302,48 @@
             <div class="halfWidth">
                 <h2 class="titleCard">STM32F4 Microcontroller</h2>
                 <p>
-                    To control our robots, we were offered an Engineering Physics Arduino MCU called a TINAH board. However, we decided to use
+                    To control our robots, we were offered an Engineering Physics Arduino MCU called a TINAH board.
+                    However, we decided to use
                     an STM32F4 ARM microcontroller. This decision gave us full control of the MCU and its peripherals.
                 </p>
                 <p>
-                    The STM32 controlled several different peripherals in different ways. Using the built-in timers, we produced Pulse-Width
-                    Modulation (PWM) waves to control the H-Bridge and the servos. Also on the built-in timers, we measured
-                    the output from encoders that were placed on our main drive wheels. This allowed us to drive and turn
+                    The STM32 controlled several different peripherals in different ways. Using the built-in timers, we
+                    produced Pulse-Width
+                    Modulation (PWM) waves to control the H-Bridge and the servos. Also on the built-in timers, we
+                    measured
+                    the output from encoders that were placed on our main drive wheels. This allowed us to drive and
+                    turn
                     accurately.
                 </p>
                 <p>
-                    The STM32 also had several analog inputs via its Analog-to-Digital (ADC) converter, which we used to read heading from the
-                    Raspberry Pi and to gather inputs for the IR frequency detection. We set this system up with Direct Memory
+                    The STM32 also had several analog inputs via its Analog-to-Digital (ADC) converter, which we used
+                    to read heading from the
+                    Raspberry Pi and to gather inputs for the IR frequency detection. We set this system up with Direct
+                    Memory
                     Access, which automatically converted values from the ADC and put it into a circular buffer.
                 </p>
                 <p>
-		    A major component of the competition was the detection of IR signals; the identification of a 1 kHz vs a 10 kHz signal meant the difference of a successful and unsuccessful run. To identify the signals with ease and simplicity, we chose to process the signal digitally.
-                    When we wanted to detect the frequency of the IR alarm signal, we filled a buffer with raw voltage data from an IR detecting transistor. Then, we could simply process the circular buffer with a Goertzel
-		    Filter to determine the signal's frequency. More information about this can be found in <a href="https://github.com/Axel-Jacobsen/DigitalFiltering">Digital Filtering</a>
+                    A major component of the competition was the detection of IR signals; the identification of a 1 kHz
+                    vs a 10 kHz signal meant the difference of a successful and unsuccessful run. To identify the
+                    signals with ease and simplicity, we chose to process the signal digitally.
+                    When we wanted to detect the frequency of the IR alarm signal, we filled a buffer with raw voltage
+                    data from an IR detecting transistor. Then, we could simply process the circular buffer with a
+                    Goertzel
+                    Filter to determine the signal's frequency. More information about this can be found in <a href="https://github.com/Axel-Jacobsen/DigitalFiltering">Digital
+                        Filtering</a>
                 </p>
                 <p>
-                    The voltage from the Raspberry Pi was used to determine how to navigate towards the Ewoks. This voltage was provided from
-                    a resistor ladder out of the Raspberry Pi, as it can only output digital voltages (i.e. either high voltage
-                    or low voltage). The analog voltage gave us an accurate angle to turn to in order to navigate to the
+                    The voltage from the Raspberry Pi was used to determine how to navigate towards the Ewoks. This
+                    voltage was provided from
+                    a resistor ladder out of the Raspberry Pi, as it can only output digital voltages (i.e. either high
+                    voltage
+                    or low voltage). The analog voltage gave us an accurate angle to turn to in order to navigate to
+                    the
                     Ewok.
                 </p>
                 <p>
-                    We also had full control over interrupts which allowed us to make important decisions (for example, 'drive away from this
+                    We also had full control over interrupts which allowed us to make important decisions (for example,
+                    'drive away from this
                     edge') quickly and easily.
                 </p>
 
@@ -286,12 +351,16 @@
                     <i>Issues and solutions</i>
                 </h3>
                 <p>
-                    The software was written in C. Therefore, we had to be careful with overflows and specifying datatypes. A benefit that this
-                    decision gave us was fast and efficient code. The disadvantages were errors with datatypes (e.g. overflows
+                    The software was written in C. Therefore, we had to be careful with overflows and specifying
+                    datatypes. A benefit that this
+                    decision gave us was fast and efficient code. The disadvantages were errors with datatypes (e.g.
+                    overflows
                     on arrays or signed integer errors).</p>
                 <p>
-                    A larger issue was the interrupts; initially, we had many interrupts that gave us issues such as unexpected triggers and
-                    high trigger frequency. Our solution was to remove our dependence on troublesome interrupts, which gave
+                    A larger issue was the interrupts; initially, we had many interrupts that gave us issues such as
+                    unexpected triggers and
+                    high trigger frequency. Our solution was to remove our dependence on troublesome interrupts, which
+                    gave
                     us more reliable code with no noticeable cost to efficiency.
                 </p>
             </div>
@@ -311,22 +380,38 @@
                 </i>
             </h3>
             <p>
-                Vanessa performed well during testing, but had some difficulties during the competition. Due to the complexity of our approach,
-                we had difficulty integrating everything on time, and had to abandon our dream of a universal procedure with
-                no hard-coding in favor of a faster but less general strategy. We began our runs with a hardcoded 7 second
-                drive using the encoders to keep Vanessa straight, before she began looking for Ewoks. Since this maneuver
-                was completely hard-coded, Vanessa’s starting position had a large impact on her path up the ramp. During
-                the first run, she started too far left, and tracked off course, falling onto the PCB between the tracks
-                and breaking our main power connection. We managed to repair the wire in the 2 minutes between rounds, but
-                the first 3 attempts in round 2 had similar results, with Vanessa starting incorrectly and driving off the
-                course before the computer vision ever took over. On the final attempt of our second run, she finally made
-                it up the ramp far enough that the computer vision took over. From there, everything worked perfectly. She
-                tracked towards the first Ewok using the camera, crossed the 6 inch gap with no issues, tracked towards the
-                second Ewok, waited for the IR beacon, and proceeded through the gate without triggering the alarm. Unfortunately,
-                we hit our 2 minute time limit and had to stop before attempting to rescue the third Ewok. Overall, the individual
-                systems worked extremely well, but we underestimate the amount of time needed to integrate and test the control
-                system as a whole. If we had time to create a universal control loop that relied only on the inputs of the
-                various sensors and contained no hard-coded procedures, I think we would have performed much better on competition
+                Vanessa performed well during testing, but had some difficulties during the competition. Due to the
+                complexity of our approach,
+                we had difficulty integrating everything on time, and had to abandon our dream of a universal procedure
+                with
+                no hard-coding in favor of a faster but less general strategy. We began our runs with a hardcoded 7
+                second
+                drive using the encoders to keep Vanessa straight, before she began looking for Ewoks. Since this
+                maneuver
+                was completely hard-coded, Vanessa’s starting position had a large impact on her path up the ramp.
+                During
+                the first run, she started too far left, and tracked off course, falling onto the PCB between the
+                tracks
+                and breaking our main power connection. We managed to repair the wire in the 2 minutes between rounds,
+                but
+                the first 3 attempts in round 2 had similar results, with Vanessa starting incorrectly and driving off
+                the
+                course before the computer vision ever took over. On the final attempt of our second run, she finally
+                made
+                it up the ramp far enough that the computer vision took over. From there, everything worked perfectly.
+                She
+                tracked towards the first Ewok using the camera, crossed the 6 inch gap with no issues, tracked towards
+                the
+                second Ewok, waited for the IR beacon, and proceeded through the gate without triggering the alarm.
+                Unfortunately,
+                we hit our 2 minute time limit and had to stop before attempting to rescue the third Ewok. Overall, the
+                individual
+                systems worked extremely well, but we underestimate the amount of time needed to integrate and test the
+                control
+                system as a whole. If we had time to create a universal control loop that relied only on the inputs of
+                the
+                various sensors and contained no hard-coded procedures, I think we would have performed much better on
+                competition
                 day.
             </p>
             <br><br>
@@ -341,15 +426,24 @@
                     Takeaways
                 </i>
             </h3>
-            <p> Our 2 biggest takeaways were “integrate early” and “create components for production the first time”. We didn’t
-                leave ourselves enough time at the end of the project to properly integrate all of the components and work
-                out all of the bugs that come along with integration. This was partly due to time being spent fixing issues
-                caused by improper builds of early prototypes. During early testing, we used jumper wires which often came
-                loose and we carried the ciruit board on top of our robot rather than mounting it to the chassis as we had
-                in the final design. Our thinking was that this allowed us to quickly make changes to the circuits if needed,
-                but it ended up costing us in time spent debugging poor connections in a messy circuit. If we were to do
-                the project again, we would stil test each component individually, but once we knew that it worked, we would
-                integrate it properly (solder in all connections, mount everything to the chassis, etc) before moving on.
+            <p> Our 2 biggest takeaways were “integrate early” and “create components for production the first time”.
+                We didn’t
+                leave ourselves enough time at the end of the project to properly integrate all of the components and
+                work
+                out all of the bugs that come along with integration. This was partly due to time being spent fixing
+                issues
+                caused by improper builds of early prototypes. During early testing, we used jumper wires which often
+                came
+                loose and we carried the ciruit board on top of our robot rather than mounting it to the chassis as we
+                had
+                in the final design. Our thinking was that this allowed us to quickly make changes to the circuits if
+                needed,
+                but it ended up costing us in time spent debugging poor connections in a messy circuit. If we were to
+                do
+                the project again, we would stil test each component individually, but once we knew that it worked, we
+                would
+                integrate it properly (solder in all connections, mount everything to the chassis, etc) before moving
+                on.
             </p>
         </div>
     </div>
