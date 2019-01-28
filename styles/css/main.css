@@ -177,9 +177,6 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
-.mainLinks a {
-  border-bottom: 0.5px;
-}
 
 .humanText {
   max-width: 230px;
